@@ -121,6 +121,9 @@ pyppeteer.errors.TimeoutError: Navigation Timeout Exceeded: 30000 ms exceeded.
 新着ポスト: {'title': 'ネムツア12/19 空き時間でランと筋トレ', 'url': 'https://nemlog.nem.social/blog/53235'}
 ```
 
+動画GIF
+![getpost](./2020-12-19_22h42_26.gif)
+
 ## 今後の改良点
 
 - 今回の記事では新着記事1件のみを取得していますが、お好みの件数分取得したり、前回の記事取得時から更新された分だけ取得するなど、工夫してみるとよいでしょう。
