@@ -1,5 +1,7 @@
 from requests_html import HTMLSession, AsyncHTMLSession
 
+newpost: dict = {}  # 新着記事
+
 # セッション開始
 session = HTMLSession()
 url = "https://nemlog.nem.social/guest"
@@ -16,5 +18,7 @@ for i in items:
     url = list(i.absolute_links)[0]
     print(f"記事URL: {url}")
     # print(f"画像を含む情報: {i.find('img')[1]}")
-    print("---")
+    newpost = {"title": title, "url": url}
     break  # 1件だけ
+
+print(f"新着記事: {newpost}")
