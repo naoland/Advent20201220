@@ -152,3 +152,4 @@ p.s. 本当はLINEに新着を通知するところまでやりたかったの�
 
 - [psf/requests-html: Pythonic HTML Parsing for Humans™](https://github.com/psf/requests-html)
 - [nemlog|暗号通貨 nemを使用した寄付機能付きブログコミュニケーションブログコミュニケーションプラットフォーム](https://nemlog.nem.social/guest)
+- [nem #2 Advent Calendar 2020 - Qiita](https://qiita.com/advent-calendar/2020/nem-2x)
