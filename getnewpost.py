@@ -1,3 +1,5 @@
+"""nemlogの新着記事を1件取得して`dict`型の変数に格納します"""
+
 from requests_html import HTMLSession, AsyncHTMLSession
 
 newpost: dict = {}  # 新着記事

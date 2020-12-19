@@ -1,11 +1,11 @@
 # Qiitaアドベントカレンダー2020年12月20日用の記事
 
-
 ## はじめに
 
-nemlogの新着記事のタイトルとURLをLineで通知する方法を簡単に紹介します。
+nemlogの新着記事のタイトルとURLを取得する方法を簡単に紹介します。
 
 この手法はスクレイピングを使っていますので、もし、ご紹介したコードをご利用する前、にnemlog管理者の「しゅうさん」に必ず了解を得ましょう。
+
 私は忘れてしまったので、事後報告とともに「しゅうさん」にご連絡するつもりです。
 
 動作確認はUbuntu 20.04LTSで行っています。
@@ -39,13 +39,12 @@ Python環境は導入済みであることを前提として、以降の説明�
 
 ## 事前準備
 
-> sudo apt-get install python-dev python-pip libxml2-dev libxslt1-dev zlib1g-dev libffi-dev libssl-dev
-
 JavaScriptによって動的に生成される新着記事を取得するために、Pythonパッケージをインストールします。
 
 > pip install requests_html
 
 pipは事前にアップデートしておいた方がよいかもしれません。
+また、不足しているUbuntuのパッケージ（主に開発用）があるかもしれませんが、その場合はエラーが表示されますので、必要なパッケージをインストールしましょう。
 
 
 ## nemlogの新着記事を取得
@@ -53,6 +52,8 @@ pipは事前にアップデートしておいた方がよいかもしれませ�
 次のPythonコードを`getnewpost.py`として任意の場所に保存してください
 
 ```python
+"""nemlogの新着記事を1件取得して`dict`型の変数に格納します"""
+
 from requests_html import HTMLSession, AsyncHTMLSession
 
 newpost: dict = {}
@@ -120,17 +121,11 @@ pyppeteer.errors.TimeoutError: Navigation Timeout Exceeded: 30000 ms exceeded.
 新着ポスト: {'title': 'ネムツア12/19 空き時間でランと筋トレ', 'url': 'https://nemlog.nem.social/blog/53235'}
 ```
 
-ご紹介したコードでは1件のみの新着情報を
-
-
-
-
-## Lineで通知する
 ## 今後の改良点
 
-今回の記事では新着記事1件のみを取得していますが、お好みの件数分取得したり、前回の記事取得時から更新された分だけ取得するなど、工夫してみるとよいでしょう。
-
-nemlogの新着記事を定期的ににチェックして、Lineで通知します。
+- 今回の記事では新着記事1件のみを取得していますが、お好みの件数分取得したり、前回の記事取得時から更新された分だけ取得するなど、工夫してみるとよいでしょう。
+- 定期的に新着記事をチェックすると良いかもしれません。ただし、スクレイピングはnemlogに負担をかけますので、1時間未満の定期チェックは避けるべきです。
+- 新着情報をLineやメールなどで通知できるようにすると便利かもしれません。
 
 ## 最後に
 
@@ -145,11 +140,12 @@ nemlogの新着記事を定期的ににチェックして、Lineで通知しま�
 
 この記事ではスクレイピングについては詳しく説明していませんが、興味のある方は`スクレイピング` というキーワードでググってみてください。
 
-
 いや～、こういう処理には`Python`はもってこいですね！
+
+p.s. 本当はLINEに新着を通知するところまでやりたかったのですが今回は無理でした。おそらくこのリポジトリ内+nemlogで続きを紹介したいと思います。
+ただし、「しゅうさん」の了解がとれた場合です。
 
 ## 参考情報へのリンク
 
 - [psf/requests-html: Pythonic HTML Parsing for Humans™](https://github.com/psf/requests-html)
 - [nemlog|暗号通貨 nemを使用した寄付機能付きブログコミュニケーションブログコミュニケーションプラットフォーム](https://nemlog.nem.social/guest)
-- [LINE Notify](https://notify-bot.line.me/ja/)
