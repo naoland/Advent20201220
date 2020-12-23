@@ -8,6 +8,8 @@ nemlogの新着記事のタイトルとURLを取得する方法を簡単に紹�
 
 私は忘れてしまったので、事後報告とともに「しゅうさん」にご連絡するつもりです。
 
+**許可をいただきました！**
+
 動作確認はUbuntu 20.04LTSで行っています。
 
 ```
@@ -148,8 +150,12 @@ pyppeteer.errors.TimeoutError: Navigation Timeout Exceeded: 30000 ms exceeded.
 p.s. 本当はLINEに新着を通知するところまでやりたかったのですが今回は無理でした。おそらくこのリポジトリ内+nemlogで続きを紹介したいと思います。
 ただし、「しゅうさん」の了解がとれた場合です。
 
+**許可をいただきました！**
+
+
 ## 参考情報へのリンク
 
+- [nemlogの新着記事のタイトルとURLを取得する方法を簡単に紹介](https://nemlog.nem.social/blog/53268)
 - [psf/requests-html: Pythonic HTML Parsing for Humans™](https://github.com/psf/requests-html)
 - [nemlog|暗号通貨 nemを使用した寄付機能付きブログコミュニケーションブログコミュニケーションプラットフォーム](https://nemlog.nem.social/guest)
 - [nem #2 Advent Calendar 2020 - Qiita](https://qiita.com/advent-calendar/2020/nem-2)
